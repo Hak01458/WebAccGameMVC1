@@ -28,13 +28,9 @@
                            asp-controller="Admin" asp-action="Categories">
                             Danh mục
                         </a>
-                        <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Ingredients" ? "active fw-semibold" : "text-dark")"
-                               asp-controller="Admin" asp-action="Ingredients">
-                            Xem Nguyên liệu tồn kho
-                        </a>
-                        <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Products" ? "active fw-semibold" : "text-dark")"
+                        <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Products" || ViewContext.RouteData.Values["action"]?.ToString() == "EditProduct" ? "active fw-semibold" : "text-dark")"
                            asp-controller="Admin" asp-action="Products">
-                            Xem số lượng bánh có thể làm
+                            Quản lý bánh
                         </a>
                         <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "TopSellingProducts" ? "active fw-semibold" : "text-dark")"
                            asp-controller="Admin" asp-action="TopSellingProducts">
